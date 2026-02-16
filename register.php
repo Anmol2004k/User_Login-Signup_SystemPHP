@@ -1,54 +1,40 @@
 <!DOCTYPE html>
-<!-- Source Codes By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Form in HTML and CSS | CodingNepal</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div class="login_form">
-    <!-- Login form container -->
-    <form action="#">
-      <h3>Log in with</h3>
-      <div class="login_option">
-        <!-- Google button -->
-        <div class="option">
-          <a href="#">
-            <img src="logos/google.png" alt="Google" />
-            <span>Google</span>
-          </a>
-        </div>
-        <!-- Apple button -->
-        <div class="option">
-          <a href="#">
-            <img src="logos/apple.png" alt="Apple" />
-            <span>Apple</span>
-          </a>
-        </div>
-      </div>
-      <!-- Login option separator -->
-      <p class="separator">
-        <span>or</span>
-      </p>
-      <!-- Email input box -->
-      <div class="input_box">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="Enter email address" required />
-      </div>
-      <!-- Paswwrod input box -->
-      <div class="input_box">
-        <div class="password_title">
-          <label for="password">Password</label>
-          <a href="#">Forgot Password?</a>
-        </div>
-        <input type="password" id="password" placeholder="Enter your password" required />
-      </div>
-       <!-- Login button -->
-      <button type="submit">Log In</button>
-      <p class="sign_up">Don't have an account? <a href="#">Sign up</a></p>
-    </form>
-  </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Register</h2>
+                    <p>Please fill this form to create an account.</p>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" class="form-control" required>
+                        </div>    
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" name="email" class="form-control" required />
+                        </div>    
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" name="password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" name="confirm_password" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" class="btn btn-primary" value="Submit">
+                        </div>
+                        <p>Already have an account? <a href="login.php">Login here</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </body>
 </html>
