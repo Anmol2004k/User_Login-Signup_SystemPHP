@@ -1,10 +1,7 @@
 <?php
-// start the session
-session_start();
+ session_start();
 
-// Check if the user is not logged in
-// Hum sirf ye check karenge ki kya userid set hai
-if (!isset($_SESSION["userid"])) {
+  if (!isset($_SESSION["userid"])) {
     header("location: login.php");
     exit;
 }

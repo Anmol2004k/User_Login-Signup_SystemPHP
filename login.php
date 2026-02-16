@@ -10,12 +10,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
     $email = trim($_POST['email']);
     $password = trim($_POST['password']);
 
-    // validate if email is empty
+    
     if (empty($email)) {
         $error .= '<p class="error">Please enter email.</p>';
     }
 
-    // validate if password is empty
+   
     if (empty($password)) {
         $error .= '<p class="error">Please enter your password.</p>';
     }
@@ -25,14 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
             $query->bind_param('s', $email);
             $query->execute();
             $result = $query->get_result();
-            // $row = $query->fetch();
+            
             if ($row = $result->fetch_assoc()) {
                  if (password_verify($password, $row['password'])) {
                     $_SESSION["userid"] = $row['id'];
                     $_SESSION["user"] = $row;
 
-                    // Redirect the user to welcome page
-                    header("location: welcome.php");
+                     header("location: welcome.php");
                     exit;
                 } else {
                     $error .= '<p class="error">The password is not valid.</p>';
@@ -43,8 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit'])) {
         }
         $query->close();
     }
-    // Close connection
-    mysqli_close($db);
+     mysqli_close($db);
 }
 ?>
 <!DOCTYPE html>
